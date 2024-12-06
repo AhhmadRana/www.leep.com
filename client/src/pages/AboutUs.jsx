@@ -94,9 +94,9 @@ const AboutUs = () => {
 <div className="bg-white p-8 m-12 mb-8 mt-[-4rem] h-[50vh]">
     <h2 className="text-slate-900 font-bold text-4xl">Why choose LEEP</h2>
     <p className="pt-4 text-lg md:text-xl text-gray-800 font-serif leading-relaxed px-10 md:px-20">
-    We provide a platform for startups, and projects to access the capital they need to thrive.
-    Explore the endless possibilities with LEEP. Your journey begins here, 
-    where passion meets purpose, and innovation knows no bounds.
+    Leep is the fee-free crowdfunding that maximizes impact and prioritizes transformative public service
+     projects, especially for Palestine. With robust security and unmatched transparency, it fosters trust 
+     and meaningful connections.
   </p>
   </div>
 </div>

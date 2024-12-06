@@ -132,7 +132,7 @@ export default function BackProjectForm({ closeModal, projectId, userId }) {
                                 Account Title:
                             </div>
                             <div>
-                                Fictitious title
+                                Muhammad Ahmad
                             </div>
                         </div>
                         <div className="flex space-x-2">
@@ -140,7 +140,7 @@ export default function BackProjectForm({ closeModal, projectId, userId }) {
                                 Account Number:
                             </div>
                             <div>
-                                Fictitious account number
+                                03133701118
                             </div>
                         </div>
                         <div className="flex space-x-2">
@@ -148,7 +148,7 @@ export default function BackProjectForm({ closeModal, projectId, userId }) {
                                 Bank Name:
                             </div>
                             <div>
-                                Fictitious bank
+                                Nayapay
                             </div>
                         </div>
                     </div>

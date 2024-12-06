@@ -22,7 +22,7 @@ const Footer = () => {
             <span className="ml-3 text-xl">LEEP</span>
           </a>
           <p className="mt-2 text-sm text-gray-400">
-            Air plant banjo lyft occupy retro adaptogen indego
+          A fee-free, secure crowdfunding platform prioritizing impactful public service projects.
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
@@ -33,14 +33,10 @@ const Footer = () => {
             <nav className="list-none mb-10">
               <li>
                 <a className="text-gray-400 hover:text-white transition-colors duration-300">
-                  What we do
+                Discover, engage, innovate, connect.
                 </a>
               </li>
-              <li>
-                <a className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Funding
-                </a>
-              </li>
+              
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -122,7 +118,7 @@ const Footer = () => {
               className="text-white ml-1"
               target="_blank"
             >
-              @COMSATS
+              @Muhammad Ahmad
             </a>
           </p>
           <span className="inline-flex sm:mt-0 mt-2 justify-center sm:justify-start">

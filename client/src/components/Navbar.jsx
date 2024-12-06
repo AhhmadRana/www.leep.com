@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { ProjectsContext } from "../contexts/ProjectsProvider";
-
 import { FaUserCircle } from "react-icons/fa";
 import ProfileMenu from "./profileMenu";
 
@@ -17,32 +16,49 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gray-900 p-2 z-20  sticky top-0  shadow-lg">
+    <div className="bg-gray-900 p-2 z-20 sticky top-0 shadow-lg">
       <div className="container mx-auto flex justify-between items-center py-4">
-        <div className="font-mono font-extrabold text-[16px] hidden md:flex space-x-4 text-white">
-          {/* Navigation links */}
-          <Link to="/" className="hover:text-teal-500 uppercase">
+        <div className="hidden md:flex space-x-4 text-white">
+          {/* Navigation links with underline animation */}
+          <Link
+            to="/"
+            className="relative hover:text-teal-500 uppercase text-xl font-sans tracking-wide"
+          >
             Home
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-teal-500 transition-all duration-300 ease-in-out hover:w-full font-bold"></span>
           </Link>
-          <Link to="/" className="hover:text-teal-500 uppercase">
+          <Link
+            to="/"
+            className="relative hover:text-teal-500 uppercase text-xl font-sans tracking-wide"
+          >
             Projects
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-teal-500 transition-all duration-300 ease-in-out hover:w-full"></span>
           </Link>
-          {/* <Link to="/add-projects" className="hover:text-teal-500 uppercase">
-            Add Projects
-          </Link> */}
-          <Link to="/Campaign" className="hover:text-teal-500 uppercase">
+          <Link
+            to="/Campaign"
+            className="relative hover:text-teal-500 uppercase text-xl font-sans tracking-wide"
+          >
             Campaign
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-teal-500 transition-all duration-300 ease-in-out hover:w-full"></span>
           </Link>
-          <Link to="/AboutUs" className="hover:text-teal-500 uppercase">
+          <Link
+            to="/AboutUs"
+            className="relative hover:text-teal-500 uppercase text-xl font-sans tracking-wide"
+          >
             About Us
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-teal-500 transition-all duration-300 ease-in-out hover:w-full"></span>
           </Link>
-          <Link to="/Search" className="hover:text-teal-500 uppercase">
+          <Link
+            to="/Search"
+            className="relative hover:text-teal-500 uppercase text-xl font-sans tracking-wide"
+          >
             Explore
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-teal-500 transition-all duration-300 ease-in-out hover:w-full"></span>
           </Link>
         </div>
-        <a className="font-bold text-white" href="/">
+        <a className="font-bold text-white -translate-x-20" href="/">
           <div className="flex items-start">
-            <h3 className="hidden md:flex font-mono font-extrabold text-[40px] text-teal-500 mr-10">
+            <h3 className="hidden md:flex font-mono font-extrabold text-[40px] text-teal-500 mr-10 ">
               LEEP
             </h3>
           </div>
@@ -57,31 +73,37 @@ const Header = () => {
             onChange={handleSearchInputChange}
           />
           <button
-            onClick={() => { }}
+            onClick={() => {}}
             className="px-4 py-2 bg-teal-500 text-white rounded-r-lg"
           >
             <BsSearch />
           </button>
           {/* User authentication */}
           <div className="">
-            {
-              user ? (
-                <div className="relative ml-3">
-                  <FaUserCircle onClick={() => { setShowProfileMenu(!showProfileMenu) }} className="text-4xl text-teal-500" />
-                </div>
-              ) : (
-                <Link
-                  to="/signin"
-                  className="font-mono font-extrabold text-[16px] bg-teal-500 rounded hover:scale-105 uppercase ml-3 px-3 py-2"
-                >
-                  Log in
-                </Link>
-              )
-            }
-            {
-              showProfileMenu && user &&
-              <ProfileMenu user={user} setUser={setUser} setShowProfileMenu={setShowProfileMenu} />
-            }
+            {user ? (
+              <div className="relative ml-3">
+                <FaUserCircle
+                  onClick={() => {
+                    setShowProfileMenu(!showProfileMenu);
+                  }}
+                  className="text-4xl text-teal-500"
+                />
+              </div>
+            ) : (
+              <Link
+                to="/signin"
+                className="font-mono font-extrabold text-[16px] bg-teal-500 rounded hover:scale-105 uppercase ml-3 px-3 py-2"
+              >
+                Log in
+              </Link>
+            )}
+            {showProfileMenu && user && (
+              <ProfileMenu
+                user={user}
+                setUser={setUser}
+                setShowProfileMenu={setShowProfileMenu}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -101,47 +123,39 @@ const Header = () => {
       </div>
       {/* Mobile menu */}
       <div
-        className={`md:hidden ${isMenuOpen ? "flex flex-col items-center" : "hidden"
-          }`}
+        className={`md:hidden ${isMenuOpen ? "flex flex-col items-center" : "hidden"}`}
       >
         {/* Mobile navigation links */}
         <Link
           to="/"
-          className="block px-4 py-2 text-lg font-medium hover:bg-gray-800 text-white"
+          className="block px-4 py-2 text-lg font-sans hover:bg-gray-800 text-white"
         >
           Home
         </Link>
         <Link
           to="/projects"
-          className="block px-4 py-2 text-lg font-medium hover:bg-gray-800 text-white"
+          className="block px-4 py-2 text-lg font-sans hover:bg-gray-800 text-white"
         >
           Projects
         </Link>
-        {/* <Link
-          to="/add-projects"
-          className="block px-4 py-2 text-lg font-medium hover:bg-gray-800 text-white"
-        >
-          Add Projects
-        </Link> */}
         <Link
           to="/campaign"
-          className="block px-4 py-2 text-lg font-medium hover:bg-gray-800 text-white"
+          className="block px-4 py-2 text-lg font-sans hover:bg-gray-800 text-white"
         >
           Campaign
         </Link>
         <Link
           to="/aboutus"
-          className="block px-4 py-2 text-lg font-medium hover:bg-gray-800 text-white"
+          className="block px-4 py-2 text-lg font-sans hover:bg-gray-800 text-white"
         >
           About Us
         </Link>
         <Link
           to="/search"
-          className="block px-4 py-2 text-lg font-medium hover:bg-gray-800 text-white"
+          className="block px-4 py-2 text-lg font-sans hover:bg-gray-800 text-white"
         >
           Explore
         </Link>
-        {/* Add more mobile navigation links here */}
       </div>
     </div>
   );

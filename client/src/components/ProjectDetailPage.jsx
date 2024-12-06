@@ -138,7 +138,7 @@ const ProjectDetailPage = () => {
                       collectedAmount={project.collectedAmount}
                     />
                     <span className="flex justify-between mt-2">
-                      ${project.collectedAmount} of Rs {project.neededAmount}{" "}
+                      Rs {project.collectedAmount} of Rs {project.neededAmount}{" "}
                       raised
                       <span className="text-sm text-gray-500">Days Left</span>
                     </span>
@@ -315,8 +315,8 @@ const ProjectDetailPage = () => {
                     <div className="mx-auto max-w-xs px-2">
                       <p className="text-base font-semibold text-gray-600">{perk.title}</p>
                       <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                        <span className="text-5xl font-bold tracking-tight text-gray-900">${perk.amount}</span>
-                        <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+                        <span className="text-5xl font-bold tracking-tight text-gray-900">Rs{perk.amount}</span>
+                        <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">PKR</span>
                       </p>
                       <p className="mt-2 text-gray-600">{perk.description}</p>
                       <p className="mt-6 text-xs leading-5 text-gray-600">Invoices and receipts available for easy company reimbursement</p>
